@@ -4,7 +4,7 @@
 
 Vòng đời của một component tức là từ lúc nó được khởi tạo và xuất hiện trong DOM của trình duyệt, re-render lại và bị unmount khởi DOM. Vòng đời gồm 3 giai đoạn chính : Mouting, Updating và Unmouting.
 
-### 1.Mouting
+## 1.Mouting
 
 Mouting là quá trình thêm component vào DOM. Theo trật tự thì quá trình tạo component từ lúc khởi tạo trạng thái đến lúc đưa vào DOM như sau: 
 
@@ -13,7 +13,7 @@ Mouting là quá trình thêm component vào DOM. Theo trật tự thì quá tr�
 3. _render\(\)_
 4. _componentDidMount\(\)_
 
-#### constructor\(\):
+### constructor\(\):
 
 Giống như ở bài trước, đây là quá trình khởi tạo state cho component. Nó thiết lập các state ban đầu. 
 
@@ -27,7 +27,7 @@ constructor(props){
 }
 ```
 
-####  **getDerivedStateFromProps\(\):**
+###  **getDerivedStateFromProps\(\):**
 
 Đúng như tên gọi. Đây là phương thức lấy trạng thái từ props nhận về của component cha. Phương thức được gọi trước khi hiển thị các phần tử trong DOM. Như ví dụ dưới đây:
 
@@ -37,7 +37,7 @@ static getDerivedStateFromProps(props, state) {
 }
 ```
 
-#### **render\(\):**
+### **render\(\):**
 
 Như đã nói ở bài component, Class không thể trả về JSX trực tiếp mà phải thông qua phương thức render. Đây cũng là lần đầu tiên component xuất hiện trong DOM.
 
@@ -51,7 +51,7 @@ class Header extends React.Component {
 }
 ```
 
-**componentDidMount\(\):**
+### **componentDidMount\(\):**
 
 Là phương thức được gọi sau khi component đã xuất hiện trên DOM. Phương thức này chạy các câu lệnh điều khiển các component đã xuất hiện. Ví dụ :
 
@@ -74,7 +74,7 @@ class Header extends React.Component {
 
 Trong ví dụ trên, ban đầu thông tin hiển thị ra sẽ là "My Favorite Color is red" sau 1s nó sẽ thành "My Favorite Color is yellow".
 
-### 2. Updating 
+## 2. Updating 
 
 Đây là giai đoạn tiếp theo khi component được cập nhật. Component được cập nhật bất cứ khi nào có sự thay đổi về state và props. Theo thứ tự nó có 5 phương thức như sau: 
 
@@ -84,7 +84,7 @@ Trong ví dụ trên, ban đầu thông tin hiển thị ra sẽ là "My Favorit
 * _getSnapshotBeforeUpdate\(\)_
 * _componentDidUpdate\(\)_ 
 
-**getDerivedStateFromProps\(\):**
+### **getDerivedStateFromProps\(\):**
 
 Cũng tại giai đoạn updating, phương thức `getDerivedStateFromProps` được gọi lần nữa. Đây là phương thức đầu tiên được gọi khi một component được cập nhật, nó vẫn có chức năng là thiết lập state dựa trên props ban đầu. Ví dụ về sử dụng như sau :
 
@@ -117,7 +117,7 @@ ReactDOM.render(
 
 Với đoạn code trên dù ta có click vào button, thì dữ liệu hiển thị ở đoạn h1 vẫn là "My Favorite Color is yellow" vì nó đã nhận từ props favcol rồi.
 
-#### shouldComponentUpdate\(\):
+### shouldComponentUpdate\(\):
 
 Như đã nói ở trên, cứ mỗi khi state và props thay đổi, component sẽ được `re-render.` Song, không phải lúc nào ta cũng cần render lại trang, vì nó sẽ ảnh hưởng lớn đến perfomance trang web. Phương thức `shouldComponentUpdate()` sẽ quyết định khi nào phải re-render hay không.
 
@@ -273,11 +273,11 @@ Hiệu suất được cải thiện như sau :
 
 ![](.gitbook/assets/gfg11.gif)
 
-#### render\(\):
+### render\(\):
 
 Không có gì khác biệt với render\(\) ban đầu. Chỉ là re-render lại mỗi khi component có thay đổi.
 
-#### getSnapshotBeforeUpdate\(\):
+### getSnapshotBeforeUpdate\(\):
 
 Đây là phương thức chỉ mới xuất hiện sau bản React 16+, nó cho phép ta truy cập props và state trước khi component được update. Tức là sau khi re-render ta vẫn có thể biết các giá trị của trước khi nó thay đổi. Lưu ý là nó cần phải dùng cùng với `componentDidUpdate()` để tránh lỗi.
 
@@ -318,15 +318,15 @@ ReactDOM.render(<Header />, document.getElementById('root'));
 
 Mình lấy lại ví dụ ở phần `componentDidMount()`, phần hiển thị vẫn là câu "My Favorite Color is red" sau 1s sẽ chuyển về yellow. Song dù state đã chuyển về yellow, nhưng `getSnapshotBeforeUpdate` vẫn có thê lấy giá trị state trước khi thay đổi để hiển thị câu "Before the update, the favorite was red".
 
-#### componentDidUpdate\(\):
+### componentDidUpdate\(\):
 
 Lấy lại ví dụ ở trên, `componentDidUpdate()` được gọi khi quá trình updating hoàn tất. Và nó nhận về giá trị của state hiện tại để hiển thị câu "The updated favorite is yellow".
 
-### 3. Unmouting
+## 3. Unmouting
 
 Giai đoạn cuối cùng là xoá component ra khỏi DOM. Giai đoạn này chỉ bao gồm một phương thức là componentWillUnMount\(\)
 
-#### componentWillUnMount\(\):
+### componentWillUnMount\(\):
 
 Ta sẽ đi thẳng vào ví dụ 
 

@@ -13,9 +13,9 @@ Như đã nói ở bài viết component, các function component là stateless 
   * useCallback
   * useReducer
 
-### Basic
+## Basic
 
-#### useState\(\)
+### useState\(\)
 
 Hàm này nhận đầu vào là giá trị khởi tạo của 1 state và trả ra 1 mảng gồm có 2 phần tử, phần tử đầu tiên là state hiện tại, phần tử thứ 2 là 1 function dùng để update state \(giống như hàm setState cũ vậy\). Nó thay thế phương thức `constructor` ở class component.
 
@@ -55,7 +55,7 @@ function Counter() {
  Khi muốn update state cho `count` là `1` thì chỉ cần gọi đến hàm `setCount(number)`.  
 Nếu như đang làm việc với React-Redux để quản lý State thì chỉ nên sử dụng useState để quản lý các UI State \(là những state có giá trị boolean nhằm mục đích render ra UI\) để tránh việc conflict với cả Redux State và maintain sau này.
 
-#### useEffect\(\)
+### useEffect\(\)
 
 Điểm đặc biệt của useEffect\(\) là nó không phải thay thế một giai đoạn mà là cả 3 giai đoạn từ mount, updating đến unmount. useEffect tương tự 3 hàm là  **componentDidMount**, **componentDidUpdate** và **componentWillUnMount** trong LifeCycle khi khai báo `arrayDependencies` là `[]`
 
@@ -126,7 +126,7 @@ Do em set `arrayDependencies` là `[]`. Nên effect `document.addEventListener("
 
 **Tóm lại**: nếu set 1 biến state trong `arrayDependencies` thì React sẽ chạy lại Hook này khi biến state đó thay đổi. Nếu chỉ muốn chạy 1 lần thì set `[]`
 
-#### useContext\(\)
+### useContext\(\)
 
 Ở bài viết trước ta đã thấy cách sử dụng Context API với Class Component. Bây giờ ta sẽ xem cách nó làm với Function Component. Về phần khởi tạo ta vẫn sử dụng `React.createContext()` và `Provider`. Nhưng thay vì sử dụng `contextType` và `Consumer` ta sử dụng **useContext\(\)**. 
 
@@ -160,9 +160,9 @@ function SecondChild() {
 }
 ```
 
-### Advanced
+## Advanced
 
-#### useMemo\(\)
+### useMemo\(\)
 
 useMemo giúp ta kiểm soát việc được render dư thừa của các component con, nó khá giống với hàm **shouldComponentUpdate** trong lifecycle. Bằng cách truyền vào 1 tham số thứ 2 thì chỉ khi tham số này thay đổi thì **useMemo** mới được thực thi. Ví dụ:
 
@@ -197,7 +197,7 @@ Nếu **không** **sử dụng** **useMemo** thì khi click 1 trong 2 button cũ
 
 **Có** **sử dụng** **useMemo** thì `ChildComponent` sẽ được render lần đầu tiên và cache lại. `ChilComponent` sẽ render lại khi biến text thay đổi.
 
-#### useCallback\(\)
+### useCallback\(\)
 
 useCallback trả về một function và một array chứa các dependencies \(những biến số được truyền vào từ bên ngoài mà function này phụ thuộc khi chạy\).
 
@@ -248,7 +248,7 @@ Khi nhấn vào button ở `ParentComponent`, component này sẽ bị render l�
 
 **useCallback** được sinh ra để giải quyết vấn đề này. Nó sẽ ghi nhớ lại function được truyền vào và danh sách các dependencies. Lúc này, khi nhấn vào button, React sẽ render lại `ParentComponent` và so sánh xem props của `ChildComponent` có thay đổi không để render tiếp. Vì `loggingStatus` hoàn toàn không phụ thuộc vào dependency nào, nên giá trị của nó không thay đổi và `ChildComponent` sẽ không bị render lại.
 
-#### useReducer\(\)
+### useReducer\(\)
 
 Thực tế khi sử dụng useState thì nó sẽ trả về 1 phiên bản đơn giản của useReducer, vậy nên chúng ta có thể coi useReducer như một phiên bản nâng cao hơn dùng để thay thế cho việc sử dụng useState. Nếu đã làm việc với React-Redux thì chắc hẳn sẽ dễ dàng nhận ra flow quen thuộc này. Giống như reducer trong Redux thì useReducer cũng nhận vào một reducer dạng \(state, action\) và trả ra một newState. Khi sử dụng chúng ta sẽ nhận được một cặp bao gồm current state và dispatch function. Ví dụ:
 

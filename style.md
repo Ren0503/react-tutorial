@@ -9,7 +9,7 @@ Có 4 cách chính để nhúng css vào react bao gồm :
 * CSS modules
 * Styled-components
 
-### CSS Stylesheet
+## CSS Stylesheet
 
 Phương pháp đầu tiên vô cùng cơ bản là chỉ việc tạo file css rồi import nó vào file js thôi :
 
@@ -46,7 +46,7 @@ export default DottedBox;
 
 Cần lưu ý là khi chạy webpack nó sẽ gộp tất cả các file css lại với nhau. Nên khi đặt tên cho các element không được trùng nếu không sẽ sinh lỗi UI.
 
-### Inline Styling
+## Inline Styling
 
 Cách này thay vì viết css ở một file riêng, ta sẽ viết nó ngay tại file js. 
 
@@ -74,7 +74,7 @@ export default Box;
 
 Ta có thể tạo biến để lưu những style object này và truyền vào element bằng **style={tenBien}** hoặc ta có thể style trực tiếp element ví dụ **style={{color: 'pink'}}**.
 
-### CSS Modules
+## CSS Modules
 
 Với việc dùng CSS Module tên class và animation được giới hạn để chỉ apply cho riêng một component.
 
@@ -113,7 +113,7 @@ Ta import file CSS vào component và access tên class trong file CSS giống n
 {% endtab %}
 {% endtabs %}
 
-### Styled-components
+## Styled-components
 
 Styled-components là một thư viện dành cho React và React Native giúp cho việc viết style CSS ngay trong một component. Đầu tiên ta cần tải về trước
 

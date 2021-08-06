@@ -19,7 +19,7 @@ So với cách quản lý state thông thường, cách này có ưu, nhược �
 
 Bây giờ ta sẽ tìm hiểu cách hoạt động của Context API.
 
-#### React.createContext\(\)
+### React.createContext\(\)
 
 ```javascript
 const MyContext = React.createContext(defaultValue);
@@ -29,7 +29,7 @@ const MyContext = React.createContext(defaultValue);
 
 Ngược lại, khi bên ngoài nó không có một **Provider** nào thì giá trị của context sẽ ứng với giá trị **defaultValue** bên trên.
 
-#### Context.Provider <a id="contextprovider"></a>
+### Context.Provider
 
 ```javascript
 <MyContext.Provider value={/* some value */}>
@@ -39,7 +39,7 @@ Với mỗi một đối tượng Context sẽ tồn tại một đối tượng
 
 Mỗi khi giá trị của **value** này thay đổi thì các thành phần bên trong Provider này sẽ bị render lại. Vì vậy, giá trị của **value** sẽ tương ứng là state của chương trình.
 
-#### Class.contextType <a id="classcontexttype"></a>
+### Class.contextType
 
 ```javascript
 class MyClass extends React.Component {
@@ -70,7 +70,7 @@ Nếu như hai API trên là để khởi tạo Context và truyền giá trị 
 
 Sau đó, mình có thể truy cập đến giá trị của Context thông qua **this.context** ở bất kỳ phương thức nào thuộc React Lifecycle và cả phương thức **render\(\)** nữa.
 
-#### Context.Consumer <a id="contextconsumer"></a>
+### Context.Consumer
 
 ```javascript
 <MyContext.Consumer>

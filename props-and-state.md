@@ -4,7 +4,7 @@
 
 Các component trả về một JSX, nên bằng tư duy bắc cầu chúng cũng có thể lồng nhau như JSX. Một component có thể bao gồm các component con khác nằm bên trong chúng.
 
-### Props
+## Props
 
 Props là viết tắt của properties nghĩa là thuộc tính, tức là những thứ mà nó nhận được từ component cha của chúng, hiểu nôm na là dữ liệu di truyền. Ví dụ như sau :
 
@@ -62,7 +62,7 @@ ClassComponentExample.defaultProps = {
 }
 ```
 
-### State
+## State
 
 Không phải viết tắt gì cả, state được sử dụng đúng với định nghĩa của nó là trạng thái của các component. State biểu diễn trạng thái hiện tại của component, tức là nó hiển thị các dữ liệu nội tại của component đó. Ví dụ dưới đây để có thể dễ mường tượng.
 
@@ -87,7 +87,7 @@ class ClassComponentExample extends React.Component {
 
 Như trong ví dụ ban đầu trạng thái của đoạn h1 sẽ là "Default Message", tuy nhiên sau khi ta click vào nút button nó sẽ thay đổi thành "Button Clicked". Cứ mỗi khi state thay đổi thì component đó sẽ được re-render lại. Quá trình tạo trạng thái trong Class Component như sau.
 
-#### 1. Constructor\(\):
+### 1. Constructor\(\):
 
 Đây là hàm khởi tạo trong Class Component, cú pháp khởi tạo như sau :
 
@@ -100,7 +100,7 @@ constructor(props){
 
 Ở đây ta dùng super\(props\) về cơ bản thì câu lệnh này mang ý nghĩa truyền props vào constructor ở component cha. Nếu thắc mắc tại sao phải làm vậy có thể đọc bài viết [này](https://overreacted.io/vi/why-do-we-write-super-props/).
 
-#### 2. Initialize State:
+### 2. Initialize State:
 
 Giai đoạn này ta thiết lập các giá trị ban đầu cho trạng thái, nó được viết ngay trong constructor :
 
@@ -111,7 +111,7 @@ this.state = {
 }
 ```
 
-#### 3. Access State:
+### 3. Access State:
 
 Khi tạo xong rồi, ta có thể sử dụng state ở trong render\(\). Ví dụ như một đoạn văn bản nhận dữ liệu từ state name.
 
@@ -121,7 +121,7 @@ render() {
 }
 ```
 
-#### 4. Updating State:
+### 4. Updating State:
 
 Trong quá trình sử dụng các state sẽ thay đổi, ta không thể cập nhật trạng thái cho state ở trong render hay constructor, mà phải thay đổi bằng một hàm độc lập.
 

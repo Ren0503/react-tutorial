@@ -12,13 +12,13 @@ Vấn đề phức tạp như đề cập ở trên sẽ còn càng khó xử l�
 
 React JS đã cố gắng giải quyết điều này ở trong tầng View bằng việc loại bỏ **Bất đồng bộ** và **Không thao tác trực tiếp trên DOM**, tuy nhiên việc quản lý state là tùy thuộc vào cách của bạn do vậy đây chính là lí do Redux xuất hiện để giúp bạn quản lý state một cách khoa học và hiệu quả hơn.
 
-### Redux 
+## Redux 
 
 Redux ra đời lấy cảm hứng từ tư tưởng của ngôn ngữ **Elm** và kiến trúc **Flux** của Facebook . Do vậy Redux thường dùng kết hợp với React. Tuy nhiên hoàn toàn có thể sử dụng với các framework khác như **Angular, Angular2, Backbone, Falcor, Deku, Swift.**
 
 Vậy bạn có cần biết Flux trước khi đến với Redux ko? câu trả lời là **KHÔNG** vì thật sự nếu bạn đã dùng flux thì cũng tốt, còn không thì bạn lại dễ tiếp cận hơn \(tránh lối mòn :D\).
 
-### Quản lý state với Redux 
+## Quản lý state với Redux 
 
 Giả sử chúng ta có 1 ứng dụng mà các node như trong hình là tượng trưng cho một single page application được mô hình tree-node.
 
@@ -42,11 +42,11 @@ Và giải pháp Redux đưa ra là như sau:
 
 Quay lại bài toán ở trên thì ta chỉ cần map Action từ node d3 về store của redux rồi ở node c3 và d4 chỉ cần connect với store và cập nhật data thay đổi -&gt; hết sức đơn giản phải ko?
 
-### Nguyên tắc hoạt động của Redux
+## Nguyên tắc hoạt động của Redux
 
 Vừa xong phần lý thuyết để phần nào các bạn mường tượng ra triết lý của Redux tiếp theo sau đây mình sẽ đi sâu vào giải thích cụ thể hơn các thành phần của Redux
 
-**a. Khái niệm cốt lõi:**
+### **a. Khái niệm cốt lõi:**
 
 Hãy tưởng tượng state của app của bạn được mô tả như 1 object thuần dưới đây:
 
@@ -67,7 +67,7 @@ Thật sự thì nó trông giống như 1 **model** ko có phương thức **se
 
 Để thay đổi state, chỉ có 1 cách duy nhất là dispatch 1 action \(Mình sẽ nói ở phần sau\).
 
-#### b. 3 nguyên tắc của Redux
+### b. 3 nguyên tắc của Redux
 
 > - **Single source of truth:** State của toàn bộ ứng dụng được lưu trong trong 1 store duy nhất là 1 Object mô hình tree.
 >
@@ -75,11 +75,11 @@ Thật sự thì nó trông giống như 1 **model** ko có phương thức **se
 >
 > - **Changes are made with pure functions:** Để chỉ rõ state tree được thay đổi bởi 1 action bạn phải viết pure **reducers**
 
-**c. Nguyên tắc vận hành**
+### **c. Nguyên tắc vận hành**
 
 ![](.gitbook/assets/1_qergzuzphdqz4e0fns1cfq.gif)
 
-### Actions
+## Actions
 
 Trong Redux action là 1 pure object định nghĩa 2 thuộc tính là : **type**: kiểu mô tả action, và **payload**: giá trị tham số truyền lên
 
@@ -90,7 +90,7 @@ Trong Redux action là 1 pure object định nghĩa 2 thuộc tính là : **type
 }
 ```
 
-### Reducers
+## Reducers
 
 Action có nhiệm vụ mô tả những gì xảy ra nhưng lại không chỉ rõ phần state nào của response thay đổi -&gt; Việc này sẽ là của Reducer đảm nhiệm:
 
@@ -100,7 +100,7 @@ Reducer nhận 2 tham số vào: 1 state cũ và action được gửi lên sau 
 (previousState, action) => newState
 ```
 
-### Store
+## Store
 
 Store là 1 object lưu trữ state của toàn bộ ứng dụng có 3 phương thức sau:
 

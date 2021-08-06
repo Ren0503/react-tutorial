@@ -4,7 +4,7 @@
 
 Ngắn gọn thì đây là các thao tác mà người dùng gửi đến cho trang web, thường là với các UI dạng button hay form hay select. Các thao tác này có thể là thay đổi theme trang web \(dark mode\), hay get/post dữ liệu. Ta có thể gọi nó là các sự kiện thay đổi trạng thái của component. 
 
-### Button
+## Button
 
 Đây là element UI, thường được dùng để bắt sự kiện. Thẻ &lt;button&gt; mặc định có thuộc tính là `onClick`, trong React ta sẽ sử dụng onClick để gọi các hàm sự kiện. Ví dụ:
 
@@ -80,11 +80,11 @@ class App extends React.Component {
 {% endtab %}
 {% endtabs %}
 
-### Forms
+## Forms
 
 Việc handle với form, ta cần lưu ý form không phải một element độc nhất như button, mà một form thường đi kèm với input, submit hay select. Thế nên thao tác với form cần thao tác với tất cả các thành phần trong nó. 
 
-#### 1. input:
+### 1. input:
 
 Đây là thành phần thường xuất hiện trong form, nó có thể nhận giá trị text, number, email hay password. Để có thể làm việc với input, ta cần dùng `onChange`
 
@@ -170,7 +170,7 @@ class MyForm extends React.Component {
 }
 ```
 
-#### 2. select :
+### 2. select :
 
 Về select thì được sử dụng trong React không khác mấy với HTML 
 
@@ -196,7 +196,7 @@ class MyForm extends React.Component {
 }
 ```
 
-#### 3. submit:
+### 3. submit:
 
 Đơn giản là một button \(có thể thay thế bởi input\) nhưng vì dùng trong form nên ta không cần onClick chỉ cần viết đơn giản thế này : 
 
@@ -235,7 +235,7 @@ class MyForm extends React.Component {
 }
 ```
 
-#### 4. Validation 
+### 4. Validation 
 
 Trong trường hợp dữ liệu nhập vào không phù hợp với mong muốn của ta, ta có thể điều chỉnh thông báo lỗi đến với người dùng :
 
