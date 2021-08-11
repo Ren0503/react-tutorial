@@ -28,4 +28,5 @@ Advanced
   * Redux Saga
 * RxJS
 * NextJS
-* 
+* Material UI/ Bootstraps
+
