@@ -4,7 +4,7 @@
 
 ![Basic Concepts React](.gitbook/assets/react.png)
 
-Trong những năm gần đây React trở nên phổ biến trong thiết kế giao diện website hay frontend. React được phát triển bởi Facebook, ra mắt từ năm 2013 đến nay React đã có một cộng đồng vô cùng mạnh mẽ, với nhiều ông lớn sử dụng. Bên cạnh Facebook còn có Airbnb, Uber, Netflix. Ở bài viết này ta sẽ đi tìm hiểu các khái niệm quan trọng trong ReactJS từ cơ bản cho đến nâng cao nhất.
+In recent years, React has become popular in website or frontend design. React is developed by Facebook, launched in 2013 until now React has an extremely strong community, with many big guys using it. Besides Facebook, there are Airbnb, Uber, Netflix. In this article, we will learn the important concepts in ReactJS from basic to advanced.
 
 * JSX
 * Component
