@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Tutorial](README.md)
+* [Introduce](README.md)
 * [JSX](jsx.md)
 * [Component](component.md)
 * [Props & State](props-and-state.md)
@@ -14,5 +14,5 @@
 
 ## Advanced
 
-* [APIS](advanced/apis.md)
+* [Axios](advanced/apis.md)
 
