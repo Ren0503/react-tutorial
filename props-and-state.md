@@ -50,7 +50,7 @@ Ví dụ trên truyền props theo ba cách sử dụng component, ta có thể 
 // It requirement
 return <h1>Func Component Example {props.name}</h1>
 // It is wrong if
-return <h1>Func Component Example {props.name}</h1>
+return <h1>Func Component Example {props.title}</h1>
 ...
 ```
 
@@ -106,7 +106,7 @@ Giai đoạn này ta thiết lập các giá trị ban đầu cho trạng thái,
 
 ```javascript
 this.state = {
-    name:value,
+    name: value,
     ...
 }
 ```

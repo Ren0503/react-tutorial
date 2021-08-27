@@ -2,13 +2,13 @@
 
 ![](.gitbook/assets/1_i_vj3gs7qo9fjcxelk2c2g.png)
 
-JSX là một template engine mà React sử dụng để tạo UI cho trang web. Nó là sự kết hợp giữa JavaScript và XML. Giống như một HTML được lồng vào trong JavaScript. Nhưng vì trình duyệt không nhận được JSX, nên nó được babel dịch từ JSX sang JavaScript. Ví dụ một đoạn code trong JavaScript : 
+JSX là một template engine mà React sử dụng để tạo UI cho trang web. Nó là sự kết hợp giữa JavaScript và XML. Giống như một HTML được lồng vào trong JavaScript. Nhưng vì trình duyệt không đọc được JSX, nên khi chạy nó được babel dịch từ JSX sang JavaScript. Ví dụ một đoạn code trong JavaScript : 
 
 ```javascript
 React.creactElement("div",{ className: "body" },"Welcome to JSX")
 ```
 
-Thì nó sẽ được dịch sang JSX như sau
+Thì nó sẽ được dịch sang JSX như sau:
 
 ```jsx
 <div className="circle">Welcom to Devil</div>
@@ -77,5 +77,20 @@ export default class App extends React.Component {
 }
 ```
 
-Bên cạnh đó tag của các element cũng có các thuộc tính tương tự như trong HTML như href, src, onClick,... Điểm khác chính là class trong HTML sẽ là className bên JSX. Như vậy JSX chỉ đơn giản là một dạng template mà React sử dụng để hiện thị giao diện UI thay vì dùng HTML hay JavaScript truyền thống.
+Hay thực hiện toán tử && :
+
+```jsx
+import React from 'react';
+
+export default class App extends React.Component {
+    render() {
+        var i = 1;
+        return (<div>{i && 'Appear'}</div>);
+    }
+}
+```
+
+Bên cạnh đó tag của các element cũng có các thuộc tính tương tự như trong HTML như href, src, onClick,... Điểm khác chính là class trong HTML sẽ là className bên JSX. Thực ra khi rendered className sẽ tự động được chuyển thành class. Nếu viết class sẽ sinh lỗi khi render.
+
+Như vậy JSX chỉ đơn giản là một dạng template mà React sử dụng để hiện thị giao diện UI thay vì dùng HTML hay JavaScript truyền thống.
 

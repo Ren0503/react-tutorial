@@ -2,7 +2,7 @@
 
 ![](.gitbook/assets/react-components-blog-image.jpg)
 
-Trong React, tất cả mọi thứ đều được cấu thành từ các component, ví dụ như một giao diện trang chủ có thể bao gồm các component như đầu trang \(header\), slideshow, bài blog, thanh tìm kiếm, ...Các component hoạt động độc lập và có thể tái sử dụng nhiều lần. Các component được viết bằng JSX với nhiệm vụ chính là hiển thị giao diện trang web. Trong React có hai loại component chính là : Class Component và Function Component.
+Trong React, tất cả mọi thứ đều được cấu thành từ các component, ví dụ như một giao diện trang chủ có thể bao gồm các component như đầu trang \(header\), slideshow, bài blog, thanh tìm kiếm,... Các component có thể bao  và có thể tái sử dụng nhiều lần. Các component được viết bằng JSX với nhiệm vụ chính là hiển thị giao diện trang web. Trong React có hai loại component chính là : Class Component và Function Component.
 
 Ví dụ về sử dụng Component:
 

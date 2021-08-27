@@ -12,7 +12,7 @@
 * [Redux](redux.md)
 * [Style](style.md)
 
-## Advanced
+## Styling
 
-* [Axios](advanced/apis.md)
+* [Inline Stylesheet](styling/inline-stylesheet.md)
 

@@ -82,7 +82,7 @@ Trong ví dụ trên, ban đầu thông tin hiển thị ra sẽ là "My Favorit
 * _shouldComponentUpdate\(\)_
 * _render\(\)_
 * _getSnapshotBeforeUpdate\(\)_
-* _componentDidUpdate\(\)_ 
+* _componentDidUpdate\(\)_
 
 ### **getDerivedStateFromProps\(\):**
 
